@@ -1,0 +1,43 @@
+{
+  "name": "dashbord",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "pg:init": "pg_ctl init -D data",
+    "pg:start": "pg_ctl -D data start",
+    "pg:createdb": "createdb -h 127.0.0.1 app",
+    "pg:stop": "pg_ctl -D data stop",
+    "start": "NODE_ENV=development && node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "front": "cd client && npm start",
+    "back": "nodemon server",
+    "dev": "concurrently \"npm run front\" \" npm run back\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.5.0",
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.5.3",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.0.1",
+    "parser": "^0.1.4",
+    "path": "^0.12.7",
+    "pg": "^8.11.3",
+    "pg-hstore": "^2.3.4",
+    "react-router-dom": "^6.16.0",
+    "Router": "^2.1.0",
+    "sequelize": "^6.33.0",
+    "webpack": "^5.88.2"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.1"
+  }
+}
